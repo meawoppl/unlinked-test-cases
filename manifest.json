@@ -1,0 +1,327 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "uuv": {
+      "repository": "https://github.com/enricoande/uuv",
+      "revision": "0b1d1e1db3372d40a59454aa7682085ec9398881",
+      "license": "MIT",
+      "license_path": "licenses/uuv-MIT.txt",
+      "license_sha256": "eb9c2b09956e70480792fe8ffdd58bc7eb07486de1dd37ee7bb184435a7be198",
+      "license_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/LICENSE"
+    },
+    "matlab": {
+      "repository": "https://github.com/TheAlgorithms/MATLAB-Octave",
+      "revision": "e150b77ad256de46c1ce3815c3d7945ac4fc28dc",
+      "license": "MIT",
+      "license_path": "licenses/matlab-MIT.txt",
+      "license_sha256": "f1b0fa7c4e821bb14b1b4857b3d63248d4b81a9a5adfc8324312272a1a22a033",
+      "license_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/LICENSE"
+    },
+    "synthetic": {
+      "repository": null,
+      "revision": null,
+      "license": "MIT",
+      "license_path": "LICENSE",
+      "license_sha256": "d9083b29c200ac92e419586dd92339485cb5ef613a9c8e5c5018dbaa3a5bd6df",
+      "license_url": null
+    }
+  },
+  "fixtures": [
+    {
+      "id": "uuv-uuvSim_simple",
+      "path": "fixtures/uuv/models/uuvSim_simple.slx",
+      "source": "uuv",
+      "source_path": "models/uuvSim_simple.slx",
+      "source_url": "https://github.com/enricoande/uuv/blob/0b1d1e1db3372d40a59454aa7682085ec9398881/models/uuvSim_simple.slx",
+      "download_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/models/uuvSim_simple.slx",
+      "sha256": "6de80256a836143baee4c69d4c0108bf2dbdaa38475b2f3333dad07a2f975c40",
+      "format": "slx",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": "R2017a",
+      "block_types": {
+        "Constant": 3,
+        "Mux": 2,
+        "Outport": 3,
+        "S-Function": 2,
+        "Terminator": 2
+      },
+      "block_count": 12,
+      "line_count": 6,
+      "system_count": 1,
+      "coverage": [
+        "import",
+        "render"
+      ],
+      "notes": "Real underwater-vehicle model. Contains Stateflow and workspace-dependent parameters; no numerical reference output has been established. Not claimed executable by Unlinked."
+    },
+    {
+      "id": "uuv-rovSim_los",
+      "path": "fixtures/uuv/models/rovSim_los.slx",
+      "source": "uuv",
+      "source_path": "models/rovSim_los.slx",
+      "source_url": "https://github.com/enricoande/uuv/blob/0b1d1e1db3372d40a59454aa7682085ec9398881/models/rovSim_los.slx",
+      "download_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/models/rovSim_los.slx",
+      "sha256": "f36fbf128cfaee1bee2ab911992671ecb086a9f65379651b299862f7c5ea11e9",
+      "format": "slx",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": "R2017a",
+      "block_types": {
+        "Abs": 2,
+        "Constant": 7,
+        "Demux": 5,
+        "Gain": 2,
+        "Inport": 19,
+        "Mux": 3,
+        "Outport": 16,
+        "Product": 3,
+        "Reference": 4,
+        "S-Function": 5,
+        "Saturate": 3,
+        "SubSystem": 6,
+        "Sum": 5,
+        "Terminator": 6,
+        "Trigonometry": 3
+      },
+      "block_count": 89,
+      "line_count": 76,
+      "system_count": 6,
+      "coverage": [
+        "import",
+        "render"
+      ],
+      "notes": "Real underwater-vehicle model. Contains Stateflow and workspace-dependent parameters; no numerical reference output has been established. Not claimed executable by Unlinked."
+    },
+    {
+      "id": "uuv-rovSim_trj",
+      "path": "fixtures/uuv/extra/rovSim_trj.slx",
+      "source": "uuv",
+      "source_path": "extra/rovSim_trj.slx",
+      "source_url": "https://github.com/enricoande/uuv/blob/0b1d1e1db3372d40a59454aa7682085ec9398881/extra/rovSim_trj.slx",
+      "download_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/extra/rovSim_trj.slx",
+      "sha256": "18445fb7b947d8dba0cbb363efc77cdeaad3934510e1a43d5d2132079a64962e",
+      "format": "slx",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": "R2017a",
+      "block_types": {
+        "Clock": 2,
+        "Constant": 6,
+        "Demux": 3,
+        "Gain": 4,
+        "Inport": 10,
+        "Mux": 2,
+        "Outport": 11,
+        "Product": 2,
+        "S-Function": 4,
+        "Saturate": 2,
+        "SubSystem": 5,
+        "Sum": 4,
+        "Terminator": 3
+      },
+      "block_count": 58,
+      "line_count": 43,
+      "system_count": 5,
+      "coverage": [
+        "import",
+        "render"
+      ],
+      "notes": "Real underwater-vehicle model. Contains Stateflow and workspace-dependent parameters; no numerical reference output has been established. Not claimed executable by Unlinked."
+    },
+    {
+      "id": "uuv-skew",
+      "path": "fixtures/uuv/functions/skew.m",
+      "source": "uuv",
+      "source_path": "functions/skew.m",
+      "source_url": "https://github.com/enricoande/uuv/blob/0b1d1e1db3372d40a59454aa7682085ec9398881/functions/skew.m",
+      "download_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/functions/skew.m",
+      "sha256": "50ff2c26ffe11d4e7de427930129ffec879c29fc688330cd0204cfcc92c8f8d9",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "uuv-rotation",
+      "path": "fixtures/uuv/functions/rotation.m",
+      "source": "uuv",
+      "source_path": "functions/rotation.m",
+      "source_url": "https://github.com/enricoande/uuv/blob/0b1d1e1db3372d40a59454aa7682085ec9398881/functions/rotation.m",
+      "download_url": "https://raw.githubusercontent.com/enricoande/uuv/0b1d1e1db3372d40a59454aa7682085ec9398881/functions/rotation.m",
+      "sha256": "7605ab3785d1fcbcf89148b42af00b792c14c27e997897007306ab726b14801b",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-binary_search",
+      "path": "fixtures/matlab/algorithms/Searching/binary_search.m",
+      "source": "matlab",
+      "source_path": "algorithms/Searching/binary_search.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Searching/binary_search.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Searching/binary_search.m",
+      "sha256": "e0fa527a4d6693321f9283a286538459df442af196aff9f4b8a52cac9452d048",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-linear_search",
+      "path": "fixtures/matlab/algorithms/Searching/linear_search.m",
+      "source": "matlab",
+      "source_path": "algorithms/Searching/linear_search.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Searching/linear_search.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Searching/linear_search.m",
+      "sha256": "83fc760521eb87c2f9a93a276bf3333250311adb4c14a3fc44171f41cbe4c4e2",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-bubble_sort",
+      "path": "fixtures/matlab/algorithms/sorting/bubble_sort.m",
+      "source": "matlab",
+      "source_path": "algorithms/sorting/bubble_sort.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/sorting/bubble_sort.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/sorting/bubble_sort.m",
+      "sha256": "56f888fdc26ef32ae96010cca30f10606d34c025d710e8101c5afc71309dfa7e",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-find_factorial",
+      "path": "fixtures/matlab/algorithms/maths/find_factorial.m",
+      "source": "matlab",
+      "source_path": "algorithms/maths/find_factorial.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/find_factorial.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/find_factorial.m",
+      "sha256": "d45a652d5fb0f2b9ff49496cf5fbbc917915eaad8ad17f87e3c7c9e287c827f4",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-fibonacci_sequence",
+      "path": "fixtures/matlab/algorithms/maths/fibonacci_sequence.m",
+      "source": "matlab",
+      "source_path": "algorithms/maths/fibonacci_sequence.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/fibonacci_sequence.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/fibonacci_sequence.m",
+      "sha256": "33c39eff4265b7a4cf4b0aceee9e9ebb60fb17d68d4ae730c74785a2755d7908",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-euclidean_distance",
+      "path": "fixtures/matlab/algorithms/maths/euclidean_distance.m",
+      "source": "matlab",
+      "source_path": "algorithms/maths/euclidean_distance.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/euclidean_distance.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/maths/euclidean_distance.m",
+      "sha256": "d625fe838f21e436c1eb7e913a911ac61c8093d04ecec728283002655dc7255e",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "matlab-isPalindrome",
+      "path": "fixtures/matlab/algorithms/Strings/isPalindrome.m",
+      "source": "matlab",
+      "source_path": "algorithms/Strings/isPalindrome.m",
+      "source_url": "https://github.com/TheAlgorithms/MATLAB-Octave/blob/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Strings/isPalindrome.m",
+      "download_url": "https://raw.githubusercontent.com/TheAlgorithms/MATLAB-Octave/e150b77ad256de46c1ce3815c3d7945ac4fc28dc/algorithms/Strings/isPalindrome.m",
+      "sha256": "109b80230cd0a79cff8f6cee60af7e46b193933f6317e18b44013fedcbe2e88e",
+      "format": "m",
+      "synthetic": false,
+      "expected_outputs": null,
+      "simulink_version": null,
+      "block_types": {},
+      "coverage": [
+        "matlab-parse"
+      ],
+      "notes": "Upstream source retained byte-for-byte. Not executed; may require language features beyond initial subset."
+    },
+    {
+      "id": "synthetic-constant-gain-sum-integrator",
+      "path": "fixtures/synthetic/constant_gain_sum_integrator.mdl",
+      "source": "synthetic",
+      "source_path": null,
+      "source_url": null,
+      "download_url": null,
+      "sha256": "f3de8ef02ac1340f6f2185f8910956eadb193028932457a7cb69ae82226358e9",
+      "format": "mdl",
+      "synthetic": true,
+      "simulink_version": null,
+      "block_types": {
+        "Constant": 2,
+        "Gain": 1,
+        "Sum": 1,
+        "Integrator": 1,
+        "Outport": 1
+      },
+      "block_count": 6,
+      "line_count": 5,
+      "system_count": 1,
+      "coverage": [
+        "import",
+        "render",
+        "simulate"
+      ],
+      "expected_outputs": {
+        "path": "fixtures/synthetic/constant_gain_sum_integrator.expected.json",
+        "sha256": "6f7e1a28e73cf1b1e4a8998c0030f18a9f21dc8bd4a8a86813d30defe38467fc"
+      },
+      "notes": "Hand-authored MDL fixture; never saved or validated by Simulink. Version field is format scaffolding, not producer provenance."
+    }
+  ]
+}
